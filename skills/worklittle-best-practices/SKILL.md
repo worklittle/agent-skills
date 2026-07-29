@@ -25,8 +25,8 @@ Auth: Bearer `sk-wl-api01-...` from [API keys](https://worklittle.com/work/api-k
 | Agent in Cursor / Claude / ChatGPT with tools | MCP | [references/transport.md](references/transport.md) |
 | Backend, scripts, high-volume loops | REST or SDK/CLI | [references/transport.md](references/transport.md) |
 | Job discovery | `GET /jobs` / `search_jobs` | skill `job-search` |
-| Hosted apply or Apply with AI | apply APIs | skill `apply-and-ats` |
-| ATS pipeline writes | Business `/candidates` | skill `apply-and-ats` |
+| Apply with AI or hosted apply | Jobs apply APIs | skill `apply-with-ai` |
+| ATS pipeline writes | Business `/candidates` | skill `ats` |
 | Docs lookup | docs discovery | skill `worklittle-docs` |
 
 Read the relevant reference (and the matching skill) before writing code or answering integration questions.

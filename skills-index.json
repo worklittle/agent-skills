@@ -21,9 +21,14 @@
       "files": ["SKILL.md", "references/filters.md"]
     },
     {
-      "name": "apply-and-ats",
-      "description": "Guides Worklittle apply flows and employer ATS: hosted apply vs Apply with AI eligibility, closed_at vs apply_with_ai_eligible, resume and cover letter grounding, candidate_job_id stage updates, and webhook identity rules. Use when applying to jobs, starting Apply with AI, generating application documents, or writing ATS candidate pipeline automation.",
-      "files": ["SKILL.md", "references/apply.md", "references/ats.md"]
+      "name": "apply-with-ai",
+      "description": "Guides Worklittle Jobs apply flows: Apply with AI eligibility and session lifecycle, hosted apply via POST /jobs/:id/apply, closed_at vs apply_with_ai_eligible, and grounded resume/cover letter generation. Use when applying to jobs, starting Apply with AI, checking apply_with_ai_eligible, or generating application documents on the Jobs product.",
+      "files": ["SKILL.md", "references/apply.md", "references/documents.md"]
+    },
+    {
+      "name": "ats",
+      "description": "Guides Worklittle Business ATS automation: candidate_job_id stage updates, notes, interviews, employees and offers, and webhook identity rules. Use when writing employer hiring-pipeline automation, moving candidates between stages, syncing an HRIS, or handling Business webhooks — not for market job apply or Apply with AI (use skill apply-with-ai).",
+      "files": ["SKILL.md", "references/pipeline.md", "references/webhooks.md"]
     }
   ]
 }

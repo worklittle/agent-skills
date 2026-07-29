@@ -24,12 +24,13 @@ npx skills update -y
 
 ## Skills
 
-| Skill | Use when |
-| --- | --- |
-| `worklittle-best-practices` | Any Worklittle integration (auth, scopes, billing, grounding, REST vs MCP) |
-| `worklittle-docs` | Looking up docs, OpenAPI, or the agent manifest |
-| `job-search` | Searching jobs, pagination, details vs keywords, market stats |
-| `apply-and-ats` | Hosted apply, Apply with AI, resumes/cover letters, ATS writes |
+| Skill | Product | Use when |
+| --- | --- | --- |
+| `worklittle-best-practices` | Shared | Any Worklittle integration (auth, scopes, billing, grounding, REST vs MCP) |
+| `worklittle-docs` | Shared | Looking up docs, OpenAPI, or the agent manifest |
+| `job-search` | Jobs | Searching jobs, pagination, details vs keywords, market stats |
+| `apply-with-ai` | Jobs | Apply with AI, hosted apply, resumes/cover letters |
+| `ats` | Business | Candidate stages, notes, offers, Business webhooks |
 
 Machine-readable index on docs: [https://docs.worklittle.com/.well-known/skills/index.json](https://docs.worklittle.com/.well-known/skills/index.json)
 
