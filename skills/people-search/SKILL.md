@@ -4,10 +4,10 @@ description: >-
   Guides Worklittle People Search: GET /people discovery with has_* flags,
   metered REST contact and resume unlocks, and people:read scope. Use when
   sourcing opt-in candidates platform-wide, enriching outbound lists, or building
-  recruiting agents — not for an employer's own ATS applicants (use skill ats).
+  recruiting agents — not for an employer's own ATS applicants (use skill candidates).
 ---
 
-Jobs / platform directory skill. ATS `/candidates` is a different dataset (Business).
+Jobs / platform directory skill. ATS `/candidates` is a different dataset (Business — skill `candidates`).
 
 ## Critical rules
 

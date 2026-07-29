@@ -4,7 +4,7 @@ description: >-
   Guides Worklittle Business job publishing: /job-listings and MCP listing tools,
   jobs:post scope, required fields, and public_job_id for apply routes. Use when
   automating Worklittle-hosted postings or careers boards — not for market job
-  search (job-search) or candidate pipeline management (ats).
+  search (job-search) or candidate pipeline management (candidates).
 ---
 
 Business product skill for employer listings.

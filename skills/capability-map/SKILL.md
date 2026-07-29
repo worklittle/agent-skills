@@ -19,9 +19,8 @@ Read this first when choosing an integration path. Full tables live in docs; thi
 | Saved-search email via API? | Jobs | `job-alerts` |
 | Opt-in talent directory? | Jobs (People) | `people-search` |
 | Publish employer listings? | Business | `post-a-job` |
-| Pipeline stages / notes? | Business | `ats` |
-| Offers / employees after hire? | Business | `offers-and-employees` |
-| Org ATS email send? | Business | `email-outbound` |
+| Pipeline, interviews, offers, candidate email/webhooks? | Business | `candidates` |
+| Employees, attendance calendar, post-hire email/webhooks? | Business | `employees` |
 | Install MCP client? | Shared | `mcp-install` |
 | Lookup docs / OpenAPI? | Shared | `worklittle-docs` |
 

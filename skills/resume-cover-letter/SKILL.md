@@ -4,8 +4,8 @@ description: >-
   Guides Worklittle resume and cover letter generation: hiring-ready vs draft
   modes, get_job_keywords as job_context, output formats, and attach-to-apply
   fields. Use when tailoring documents to a job_id or building apply pipelines —
-  not for Apply with AI browser sessions (use skill apply-with-ai) or ATS writes
-  (use skill ats).
+  not for Apply with AI browser sessions (use skill apply-with-ai) or ATS
+  candidate writes (use skill candidates).
 ---
 
 Jobs document skill. For full apply session lifecycle, also load `apply-with-ai`.

@@ -37,9 +37,8 @@ npx skills update -y
 | `resume-cover-letter` | Jobs | Resumes and cover letters |
 | `people-search` | Jobs | Opt-in talent directory + unlocks |
 | `post-a-job` | Business | Publish employer listings |
-| `ats` | Business | Pipeline stages, notes, webhooks |
-| `offers-and-employees` | Business | Offers, employees, hire completion |
-| `email-outbound` | Business | Org ATS email send |
+| `candidates` | Business | Pipeline, interviews, offers, hiring email, webhooks |
+| `employees` | Business | Roster, attendance calendar, email, org webhooks |
 
 Machine-readable index on docs: [https://docs.worklittle.com/.well-known/skills/index.json](https://docs.worklittle.com/.well-known/skills/index.json)
 

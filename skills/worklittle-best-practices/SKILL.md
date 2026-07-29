@@ -33,9 +33,8 @@ Auth: Bearer `sk-wl-api01-...` from [API keys](https://worklittle.com/work/api-k
 | Resumes / cover letters | Document APIs | skill `resume-cover-letter` |
 | Opt-in talent directory | `GET /people` | skill `people-search` |
 | Publish employer listings | `/job-listings` | skill `post-a-job` |
-| ATS pipeline writes | Business `/candidates` | skill `ats` |
-| Offers / employees after hire | `/offers`, `/employees` | skill `offers-and-employees` |
-| Org ATS email send | `/email/send` | skill `email-outbound` |
+| Candidates (stages, interviews, offers, email, webhooks) | Business `/candidates` | skill `candidates` |
+| Employees (roster, attendance calendar, email, webhooks) | Business `/employees` | skill `employees` |
 | Docs lookup | docs discovery | skill `worklittle-docs` |
 
 Read the relevant reference (and the matching skill) before writing code or answering integration questions.

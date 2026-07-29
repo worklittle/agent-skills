@@ -4,7 +4,8 @@ description: >-
   Guides Worklittle API job-alert CRUD on /job-alerts and MCP alert tools: saved
   search filters, batched email sends, and developer-key billing. Use when building
   saved-search email products with API keys — not consumer profile alerts on
-  worklittle.com, and not employer ATS outbound email (use skill email-outbound).
+  worklittle.com, and not employer ATS outbound email (use skill candidates or
+  employees).
 ---
 
 Jobs API skill for saved-search email. Separate from Business `send_email` and from consumer Settings job alerts.

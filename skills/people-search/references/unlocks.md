@@ -19,5 +19,5 @@ Typical fields: `email`, `work_email`, `phone`, `linkedin`, `github`, `website`,
 | | People Search | ATS `/candidates` |
 | --- | --- | --- |
 | Scope | Platform opt-in directory | Your org only |
-| Skill | `people-search` | `ats` |
+| Skill | `people-search` | `candidates` |
 | Unlock contact | Yes (REST) | Use candidate profile fields |
