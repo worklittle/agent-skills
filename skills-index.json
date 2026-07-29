@@ -1,0 +1,29 @@
+{
+  "skills": [
+    {
+      "name": "worklittle-best-practices",
+      "description": "Guides Worklittle integration decisions across REST vs MCP vs SDK/CLI, API key scopes, per-job search billing, rate limits and 402 handling, grounding answers in API data, and never inventing job_id or candidate IDs. Use when building, modifying, or reviewing any Worklittle integration, including job search, apply automation, resumes, ATS, People Search, webhooks, or MCP tools.",
+      "files": [
+        "SKILL.md",
+        "references/transport.md",
+        "references/scopes.md",
+        "references/billing.md"
+      ]
+    },
+    {
+      "name": "worklittle-docs",
+      "description": "Use when the user or agent needs to read, search, or look up Worklittle documentation or API reference. Prefer docs discovery URLs over guessing endpoints, scopes, or MCP tool names.",
+      "files": ["SKILL.md"]
+    },
+    {
+      "name": "job-search",
+      "description": "Guides Worklittle job search and discovery: search_jobs / GET /jobs filters, per-job billing and limit discipline, cursor pagination, get_job_details vs get_job_keywords, closed jobs, and free market stats. Use when searching jobs, building a job board or search assistant, ranking roles, or answering market questions from Worklittle data.",
+      "files": ["SKILL.md", "references/filters.md"]
+    },
+    {
+      "name": "apply-and-ats",
+      "description": "Guides Worklittle apply flows and employer ATS: hosted apply vs Apply with AI eligibility, closed_at vs apply_with_ai_eligible, resume and cover letter grounding, candidate_job_id stage updates, and webhook identity rules. Use when applying to jobs, starting Apply with AI, generating application documents, or writing ATS candidate pipeline automation.",
+      "files": ["SKILL.md", "references/apply.md", "references/ats.md"]
+    }
+  ]
+}
