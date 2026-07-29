@@ -8,7 +8,7 @@ description: >-
   generating application documents on the Jobs product.
 ---
 
-Jobs product skill (market apply + documents). For employer ATS pipeline writes, use skill `ats`.
+Jobs product skill (market apply). For document-only work prefer skill `resume-cover-letter`. For employer ATS pipeline writes, use skill `ats`.
 
 ## Two apply paths
 

@@ -16,9 +16,29 @@
       "files": ["SKILL.md"]
     },
     {
+      "name": "capability-map",
+      "description": "Routes a Worklittle product goal to the correct REST endpoint, MCP tool, scope, docs page, and agent skill. Use when the user knows what they want to build but not which API to call, or when disambiguating Jobs vs Business vs People Search.",
+      "files": ["SKILL.md"]
+    },
+    {
+      "name": "mcp-install",
+      "description": "Guides Worklittle MCP client setup: https://mcp.worklittle.com/, Bearer sk-wl-api01 auth, one-click installs, and common JSON-RPC auth errors. Use when connecting Cursor, VS Code, Claude, ChatGPT, or other MCP clients — before calling Worklittle tools in an agent session.",
+      "files": ["SKILL.md"]
+    },
+    {
       "name": "job-search",
       "description": "Guides Worklittle job search and discovery: search_jobs / GET /jobs filters, per-job billing and limit discipline, cursor pagination, get_job_details vs get_job_keywords, closed jobs, and free market stats. Use when searching jobs, building a job board or search assistant, ranking roles, or answering market questions from Worklittle data.",
       "files": ["SKILL.md", "references/filters.md"]
+    },
+    {
+      "name": "market-stats",
+      "description": "Guides free Worklittle market aggregates via GET /stats and get_market_overview, plus paid salary averages, and when not to paginate job search for counts. Use when answering how-many, trends, remote share, top companies, or compensation ranges — not when listing individual open roles (use skill job-search).",
+      "files": ["SKILL.md"]
+    },
+    {
+      "name": "job-alerts",
+      "description": "Guides Worklittle API job-alert CRUD on /job-alerts and MCP alert tools: saved search filters, batched email sends, and developer-key billing. Use when building saved-search email products with API keys — not consumer profile alerts on worklittle.com, and not employer ATS outbound email (use skill email-outbound).",
+      "files": ["SKILL.md"]
     },
     {
       "name": "apply-with-ai",
@@ -26,9 +46,34 @@
       "files": ["SKILL.md", "references/apply.md", "references/documents.md"]
     },
     {
+      "name": "resume-cover-letter",
+      "description": "Guides Worklittle resume and cover letter generation: hiring-ready vs draft modes, get_job_keywords as job_context, output formats, and attach-to-apply fields. Use when tailoring documents to a job_id or building apply pipelines — not for Apply with AI browser sessions (use skill apply-with-ai) or ATS writes (use skill ats).",
+      "files": ["SKILL.md"]
+    },
+    {
+      "name": "people-search",
+      "description": "Guides Worklittle People Search: GET /people discovery with has_* flags, metered REST contact and resume unlocks, and people:read scope. Use when sourcing opt-in candidates platform-wide, enriching outbound lists, or building recruiting agents — not for an employer's own ATS applicants (use skill ats).",
+      "files": ["SKILL.md", "references/unlocks.md"]
+    },
+    {
+      "name": "post-a-job",
+      "description": "Guides Worklittle Business job publishing: /job-listings and MCP listing tools, jobs:post scope, required fields, and public_job_id for apply routes. Use when automating Worklittle-hosted postings or careers boards — not for market job search (job-search) or candidate pipeline management (ats).",
+      "files": ["SKILL.md"]
+    },
+    {
       "name": "ats",
       "description": "Guides Worklittle Business ATS automation: candidate_job_id stage updates, notes, interviews, employees and offers, and webhook identity rules. Use when writing employer hiring-pipeline automation, moving candidates between stages, syncing an HRIS, or handling Business webhooks — not for market job apply or Apply with AI (use skill apply-with-ai).",
       "files": ["SKILL.md", "references/pipeline.md", "references/webhooks.md"]
+    },
+    {
+      "name": "offers-and-employees",
+      "description": "Guides Worklittle Business hire completion: offers CRUD, employee records, employment periods, and candidate_job_id stage moves into hire. Use when automating offers, HRIS hire sync, or post-offer roster management — not for market apply (apply-with-ai) or People Search (people-search).",
+      "files": ["SKILL.md"]
+    },
+    {
+      "name": "email-outbound",
+      "description": "Guides Worklittle Business ATS outbound email: templates on /email-messages, metered POST /email/send, and GET /email/sends history. Use when automating stage or offer email from employer integrations — not API job-alert emails (skill job-alerts) or consumer Settings alerts on worklittle.com.",
+      "files": ["SKILL.md"]
     }
   ]
 }

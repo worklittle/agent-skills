@@ -22,11 +22,20 @@ Auth: Bearer `sk-wl-api01-...` from [API keys](https://worklittle.com/work/api-k
 
 | Building… | Prefer | Details |
 | --- | --- | --- |
+| Unsure which endpoint / product | Router | skill `capability-map` |
+| Connect Cursor / Claude / VS Code | MCP install | skill `mcp-install` |
 | Agent in Cursor / Claude / ChatGPT with tools | MCP | [references/transport.md](references/transport.md) |
 | Backend, scripts, high-volume loops | REST or SDK/CLI | [references/transport.md](references/transport.md) |
 | Job discovery | `GET /jobs` / `search_jobs` | skill `job-search` |
+| Counts / trends / salary averages | `GET /stats` | skill `market-stats` |
+| API saved-search email | `/job-alerts` | skill `job-alerts` |
 | Apply with AI or hosted apply | Jobs apply APIs | skill `apply-with-ai` |
+| Resumes / cover letters | Document APIs | skill `resume-cover-letter` |
+| Opt-in talent directory | `GET /people` | skill `people-search` |
+| Publish employer listings | `/job-listings` | skill `post-a-job` |
 | ATS pipeline writes | Business `/candidates` | skill `ats` |
+| Offers / employees after hire | `/offers`, `/employees` | skill `offers-and-employees` |
+| Org ATS email send | `/email/send` | skill `email-outbound` |
 | Docs lookup | docs discovery | skill `worklittle-docs` |
 
 Read the relevant reference (and the matching skill) before writing code or answering integration questions.

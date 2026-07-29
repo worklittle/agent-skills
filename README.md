@@ -26,11 +26,20 @@ npx skills update -y
 
 | Skill | Product | Use when |
 | --- | --- | --- |
-| `worklittle-best-practices` | Shared | Any Worklittle integration (auth, scopes, billing, grounding, REST vs MCP) |
-| `worklittle-docs` | Shared | Looking up docs, OpenAPI, or the agent manifest |
-| `job-search` | Jobs | Searching jobs, pagination, details vs keywords, market stats |
-| `apply-with-ai` | Jobs | Apply with AI, hosted apply, resumes/cover letters |
-| `ats` | Business | Candidate stages, notes, offers, Business webhooks |
+| `worklittle-best-practices` | Shared | Auth, scopes, billing, grounding, REST vs MCP |
+| `worklittle-docs` | Shared | Docs / OpenAPI / agent manifest |
+| `capability-map` | Shared | Goal → endpoint / tool / scope / skill |
+| `mcp-install` | Shared | Connect MCP clients |
+| `job-search` | Jobs | Search, pagination, details vs keywords |
+| `market-stats` | Jobs | Free aggregates, salary averages |
+| `job-alerts` | Jobs | API saved-search email |
+| `apply-with-ai` | Jobs | Apply with AI, hosted apply |
+| `resume-cover-letter` | Jobs | Resumes and cover letters |
+| `people-search` | Jobs | Opt-in talent directory + unlocks |
+| `post-a-job` | Business | Publish employer listings |
+| `ats` | Business | Pipeline stages, notes, webhooks |
+| `offers-and-employees` | Business | Offers, employees, hire completion |
+| `email-outbound` | Business | Org ATS email send |
 
 Machine-readable index on docs: [https://docs.worklittle.com/.well-known/skills/index.json](https://docs.worklittle.com/.well-known/skills/index.json)
 
