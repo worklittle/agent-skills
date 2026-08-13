@@ -2,10 +2,9 @@
 name: job-search
 description: >-
   Guides Worklittle job search and discovery: search_jobs / GET /jobs filters,
-  per-job billing and limit discipline, cursor pagination, get_job_details vs
-  get_job_keywords, closed jobs, and free market stats. Use when searching jobs,
-  building a job board or search assistant, ranking roles, or answering market
-  questions from Worklittle data.
+  quota-aware pagination, get_job_details vs get_job_keywords, closed jobs, and
+  free market stats. Use when searching jobs, building a job board or search
+  assistant, ranking roles, or answering market questions from Worklittle data.
 ---
 
 ## Canonical funnel
@@ -21,7 +20,8 @@ Do not feed full job descriptions into document models — use keywords. See [re
 
 ## Critical rules
 
-- **Billing is per job in `data`.** `limit=50` costs about 5× `limit=10`. Default 10–20.
+- **Search is free within monthly quotas** (not billed per row). Still keep `limit` at 10–20 so you do not burn quota.
+- **Matching is title/filter text** (substring / FTS), not vector embeddings.
 - **List rows are snippets.** Never state requirements or salary from search results alone.
 - **Opaque cursors only.** Max 50 per page. Paginate on user intent, not by default (~3 pages/conversation).
 - **Closed jobs:** check `closed_at`. Open ≠ applicable.

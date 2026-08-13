@@ -2,7 +2,7 @@
   "skills": [
     {
       "name": "worklittle-best-practices",
-      "description": "Guides Worklittle integration decisions across REST vs MCP vs SDK/CLI, API key scopes, per-job search billing, rate limits and 402 handling, grounding answers in API data, and never inventing job_id or candidate IDs. Use when building, modifying, or reviewing any Worklittle integration, including job search, apply automation, resumes, ATS, People Search, webhooks, or MCP tools.",
+      "description": "Guides Worklittle integration decisions across REST vs MCP vs SDK/CLI, API key scopes, AI token billing, free quotas, rate limits and 402 handling, grounding answers in API data, and never inventing job_id or candidate IDs. Use when building, modifying, or reviewing any Worklittle integration, including job search, apply automation, resumes, ATS, webhooks, or MCP tools.",
       "files": [
         "SKILL.md",
         "references/transport.md",
@@ -13,52 +13,76 @@
     {
       "name": "worklittle-docs",
       "description": "Use when the user or agent needs to read, search, or look up Worklittle documentation or API reference. Prefer docs discovery URLs over guessing endpoints, scopes, or MCP tool names.",
-      "files": ["SKILL.md"]
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "capability-map",
-      "description": "Routes a Worklittle product goal to the correct REST endpoint, MCP tool, scope, docs page, and agent skill. Use when the user knows what they want to build but not which API to call, or when disambiguating Jobs vs Business vs People Search.",
-      "files": ["SKILL.md"]
+      "description": "Routes a Worklittle product goal to the correct REST endpoint, MCP tool, scope, docs page, and agent skill. Use when the user knows what they want to build but not which API to call, or when disambiguating Jobs vs Business.",
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "mcp-install",
       "description": "Guides Worklittle MCP client setup: https://mcp.worklittle.com/, Bearer sk-wl-api01 auth, one-click installs, and common JSON-RPC auth errors. Use when connecting Cursor, VS Code, Claude, ChatGPT, or other MCP clients — before calling Worklittle tools in an agent session.",
-      "files": ["SKILL.md"]
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "job-search",
-      "description": "Guides Worklittle job search and discovery: search_jobs / GET /jobs filters, per-job billing and limit discipline, cursor pagination, get_job_details vs get_job_keywords, closed jobs, and free market stats. Use when searching jobs, building a job board or search assistant, ranking roles, or answering market questions from Worklittle data.",
-      "files": ["SKILL.md", "references/filters.md"]
+      "description": "Guides Worklittle job search and discovery: search_jobs / GET /jobs filters, quota-aware pagination, get_job_details vs get_job_keywords, closed jobs, and free market stats. Use when searching jobs, building a job board or search assistant, ranking roles, or answering market questions from Worklittle data.",
+      "files": [
+        "SKILL.md",
+        "references/filters.md"
+      ]
     },
     {
       "name": "market-stats",
       "description": "Guides free Worklittle market aggregates via GET /stats and get_market_overview, plus paid salary averages, and when not to paginate job search for counts. Use when answering how-many, trends, remote share, top companies, or compensation ranges — not when listing individual open roles (use skill job-search).",
-      "files": ["SKILL.md"]
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "job-alerts",
-      "description": "Guides Worklittle API job-alert CRUD on /job-alerts and MCP alert tools: saved search filters, batched email sends, and developer-key billing. Use when building saved-search email products with API keys — not consumer profile alerts on worklittle.com, and not employer ATS outbound email (use skill candidates or employees).",
-      "files": ["SKILL.md"]
+      "description": "Consumer Instant job alerts on worklittle.com Settings. Not a public /job-alerts API. Use when a user asks about job-alert email, profile Job title matches, or why there is no saved-search email API.",
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "apply-with-ai",
       "description": "Guides Worklittle Jobs apply flows: Apply with AI eligibility and session lifecycle, hosted apply via POST /jobs/:id/apply, closed_at vs apply_with_ai_eligible, and grounded resume/cover letter generation. Use when applying to jobs, starting Apply with AI, checking apply_with_ai_eligible, or generating application documents on the Jobs product.",
-      "files": ["SKILL.md", "references/apply.md", "references/documents.md"]
+      "files": [
+        "SKILL.md",
+        "references/apply.md",
+        "references/documents.md"
+      ]
     },
     {
       "name": "resume-cover-letter",
       "description": "Guides Worklittle resume and cover letter generation: hiring-ready vs draft modes, get_job_keywords as job_context, output formats, and attach-to-apply fields. Use when tailoring documents to a job_id or building apply pipelines — not for Apply with AI browser sessions (use skill apply-with-ai) or ATS candidate writes (use skill candidates).",
-      "files": ["SKILL.md"]
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "people-search",
-      "description": "Guides Worklittle People Search: GET /people discovery with has_* flags, metered REST contact and resume unlocks, and people:read scope. Use when sourcing opt-in candidates platform-wide, enriching outbound lists, or building recruiting agents — not for an employer's own ATS applicants (use skill candidates).",
-      "files": ["SKILL.md", "references/unlocks.md"]
+      "description": "Public Worklittle People Search is temporarily unavailable (410 Gone). Reason: opt-in directory is still too small to ship publicly. Prefer skill candidates for employer ATS applicants. Use when a user asks about GET /people, search_people, or contact unlocks.",
+      "files": [
+        "SKILL.md",
+        "references/unlocks.md"
+      ]
     },
     {
       "name": "post-a-job",
       "description": "Guides Worklittle Business job publishing: /job-listings and MCP listing tools, jobs:post scope, required fields, and public_job_id for apply routes. Use when automating Worklittle-hosted postings or careers boards — not for market job search (job-search) or candidate pipeline management (candidates).",
-      "files": ["SKILL.md"]
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "candidates",
@@ -74,7 +98,7 @@
     },
     {
       "name": "employees",
-      "description": "Guides Worklittle Business employee roster work: create/update employees and employment periods, performance feedback, org attendance calendar, hiring-team email, and organization member webhooks. Use when automating hire conversion, HRIS employee sync, PTO/calendar, or post-hire roster management — not for pre-hire pipeline (use skill candidates) or People Search (people-search).",
+      "description": "Guides Worklittle Business employee roster work: create/update employees and employment periods, performance feedback, org attendance calendar, hiring-team email, and organization member webhooks. Use when automating hire conversion, HRIS employee sync, PTO/calendar, or post-hire roster management — not for pre-hire pipeline (use skill candidates).",
       "files": [
         "SKILL.md",
         "references/roster.md",

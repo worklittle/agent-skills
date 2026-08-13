@@ -3,7 +3,7 @@ name: capability-map
 description: >-
   Routes a Worklittle product goal to the correct REST endpoint, MCP tool, scope,
   docs page, and agent skill. Use when the user knows what they want to build but
-  not which API to call, or when disambiguating Jobs vs Business vs People Search.
+  not which API to call, or when disambiguating Jobs vs Business.
 ---
 
 Read this first when choosing an integration path. Full tables live in docs; this skill is the router.
@@ -16,21 +16,21 @@ Read this first when choosing an integration path. Full tables live in docs; thi
 | Counts / trends / salary averages? | Jobs | `market-stats` |
 | Apply with AI / hosted apply? | Jobs | `apply-with-ai` |
 | Resumes / cover letters? | Jobs | `resume-cover-letter` |
-| Saved-search email via API? | Jobs | `job-alerts` |
-| Opt-in talent directory? | Jobs (People) | `people-search` |
+| Job seeker alert emails (Settings, not API)? | Jobs | `job-alerts` |
 | Publish employer listings? | Business | `post-a-job` |
 | Pipeline, interviews, offers, candidate email/webhooks? | Business | `candidates` |
 | Employees, attendance calendar, post-hire email/webhooks? | Business | `employees` |
 | Install MCP client? | Shared | `mcp-install` |
 | Lookup docs / OpenAPI? | Shared | `worklittle-docs` |
 
+Public People Search is temporarily unavailable. Prefer `candidates` for employer-scoped talent.
+
 ## Billing anchor
 
-Job search bills **per job in `data`**, not per HTTP request. Aggregates → `market-stats`. Individual roles → `job-search`.
+The only paid meter is **AI tokens**. Job search and most ATS calls are free within monthly quotas ([Jobs rate limits](https://docs.worklittle.com/jobs/resources/rate-limits), [Business rate limits](https://docs.worklittle.com/business/resources/rate-limits)). Aggregates → `market-stats`. Individual roles → `job-search`.
 
 ## REST-only gaps (no MCP)
 
-- People contact unlock: `GET /people/:id/contact`
 - Public board apply: `POST /job-boards/:company/jobs/:id/apply`
 
 ## Docs

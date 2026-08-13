@@ -1,30 +1,18 @@
 ---
 name: job-alerts
 description: >-
-  Guides Worklittle API job-alert CRUD on /job-alerts and MCP alert tools: saved
-  search filters, batched email sends, and developer-key billing. Use when building
-  saved-search email products with API keys — not consumer profile alerts on
-  worklittle.com, and not employer ATS outbound email (use skill candidates or
-  employees).
+  Consumer job-alert email on worklittle.com Settings. Not a public REST or MCP
+  product. Use when a user asks about Instant job alerts, profile Job title
+  matches, or why there is no /job-alerts API.
 ---
 
-Jobs API skill for saved-search email. Separate from Business `send_email` and from consumer Settings job alerts.
+Job seeker alert email is **Settings only**. There is no public `/job-alerts` CRUD API and no public MCP alert tools for integrators.
 
-## Critical rules
+## What to tell agents
 
-- Alerts are **account-scoped saved filter sets** that reuse **`GET /jobs` filter vocabulary**.
-- Sends are **batched**, not one email per matching job.
-- API-created alert sends are **metered** when matches meet the send threshold — confirm spend assumptions before creating many alerts.
-- Scope: **`jobs:read`** for alert CRUD.
-- Do not confuse with org hiring email (`email-outbound`) or webhooks.
+- Signed-in people turn on **Instant job alerts** in [Settings](https://worklittle.com/settings).
+- Matches come from the profile **Job title** field (desired role), not from a saved `GET /jobs` filter set you create with an API key.
+- Help: [Instant job alerts](https://docs.worklittle.com/help/profile-alerts/job-alerts).
+- Employer hiring email and org webhooks are separate (`send_email`, `/webhooks`).
 
-## Endpoints
-
-| Method | Path | MCP |
-| --- | --- | --- |
-| GET | `/job-alerts` | `list_job_alerts` |
-| POST | `/job-alerts` | `create_job_alert` |
-| PATCH | `/job-alerts/:id` | `update_job_alert` |
-| DELETE | `/job-alerts/:id` | `delete_job_alert` |
-
-Docs: [Alerts and market](https://docs.worklittle.com/use-cases/alerts-and-market) · [Search jobs](https://docs.worklittle.com/jobs/api/search-jobs) · [Pricing](https://docs.worklittle.com/jobs/get-started/pricing)
+Do not call or document `GET/POST /job-alerts` or `create_job_alert` as a supported public integration.

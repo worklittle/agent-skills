@@ -22,4 +22,4 @@ Prefer MCP when the agent already has an MCP client. Prefer REST when you need t
 Authorization: Bearer sk-wl-api01-...
 ```
 
-Create keys at https://worklittle.com/work/api-keys. Worklittle shows the full secret once.
+Create keys at https://worklittle.com/business/api-keys. Worklittle shows the full secret once.

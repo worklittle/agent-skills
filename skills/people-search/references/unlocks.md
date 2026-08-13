@@ -1,23 +1,8 @@
 # People Search unlocks
 
-## Contact fields
+Public People Search unlocks are **temporarily unavailable** (same as search). Prefer ATS candidates for employer-scoped contacts.
 
-`GET /people/:id/contact?field=<name>`
-
-Typical fields: `email`, `work_email`, `phone`, `linkedin`, `github`, `website`, `x` (and similar presence flags from search).
-
-- Confirm with the user before spending
-- Cache unlocked values — repeat unlocks bill again
-- No MCP equivalent; use REST with Bearer key
-
-## Resume
-
-`GET /people/:id/resume` — processed resume text/HTML for the profile.
-
-## vs ATS
-
-| | People Search | ATS `/candidates` |
+| | People Search (off) | ATS `/candidates` |
 | --- | --- | --- |
-| Scope | Platform opt-in directory | Your org only |
-| Skill | `people-search` | `candidates` |
-| Unlock contact | Yes (REST) | Use candidate profile fields |
+| Status | Disabled (410) | Live |
+| Skill | `people-search` (unavailable notice) | `candidates` |

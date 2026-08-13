@@ -12,7 +12,7 @@ Shared install skill. For which tool to call after connect, use `capability-map`
 ## Critical rules
 
 - MCP URL: **`https://mcp.worklittle.com/`** (forwards JSON-RPC to the Jobs API with your key).
-- Every request needs `Authorization: Bearer sk-wl-api01-...` from [API keys](https://worklittle.com/work/api-keys).
+- Every request needs `Authorization: Bearer sk-wl-api01-...` from [API keys](https://worklittle.com/business/api-keys).
 - Same prepaid balance and scopes as REST. Missing scope → **403**; no balance → **402**; rate limit → **429** (often JSON-RPC `-32603`).
 - After changing MCP config, **restart** the client.
 - Agent skills (`npx skills add https://docs.worklittle.com`) are separate from MCP tools — install both when useful.

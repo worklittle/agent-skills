@@ -8,7 +8,7 @@ Missing scope → **403**. Empty result sets are not a substitute for a missing 
 | --- | --- |
 | `jobs:read` | `GET /jobs`, `GET /jobs/:id`, `GET /jobs/map`, `GET /stats` |
 | `jobs:apply` | `POST /jobs/:id/apply`, Apply with AI, MCP `submit_job_application` |
-| `people:read` | `GET /people`, resume and contact unlocks |
+| `people:read` | Reserved — public People Search temporarily unavailable |
 | `agent:tools` | `POST /v1/resumes`, `POST /v1/cover-letters`, `POST /v1/agent/tool` |
 
 ## Business (employer workspace)
@@ -17,7 +17,7 @@ Missing scope → **403**. Empty result sets are not a substitute for a missing 
 | --- | --- |
 | `jobs:post` | `/job-listings`, `/jobs/manage`, `/jobs/post/*` |
 | `jobs:applications` | ATS (`/candidates`, `/employees`, `/offers`, `/attendance`, email, …) |
-| `people:read` | People Search + unlocks |
+| `people:read` | Reserved — public People Search temporarily unavailable |
 | `webhooks:manage` | `/webhooks` CRUD and delivery |
 | `documents:read` / `documents:write` | `/platform/documents` |
 | `employees:read` | Surveys and related employee-org reads |
@@ -29,6 +29,5 @@ Missing scope → **403**. Empty result sets are not a substitute for a missing 
 | Search and detail | `jobs:read` |
 | Apply + Apply with AI | `jobs:read`, `jobs:apply` |
 | Resumes / cover letters | `jobs:read`, `agent:tools` |
-| People Search | `people:read` |
 | ATS automation | `jobs:applications` (+ `jobs:post` if posting) |
 | Webhooks | `webhooks:manage` |

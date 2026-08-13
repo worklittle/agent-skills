@@ -1,26 +1,37 @@
 # Billing and rate limits
 
-Default rate limit: **60 requests/min per key**. On `429`, honor `Retry-After` (often 60).
+Default rate limit: **60 requests/min per key**. On per-minute `429` with `RATE_LIMITED`, honor `Retry-After` (often 60).
 
-## Metered highlights
+Monthly free quotas return `429` with code **`QUOTA_EXCEEDED`** (no Retry-After). Tell the user to email **business@worklittle.com** for higher limits. Do not busy-retry.
 
-| Item | Rule |
+## Who pays what
+
+| Surface | Free | Then |
+| --- | --- | --- |
+| API / MCP (API key) | Quotas below + cached job AI | Org wallet **AI tokens only** |
+| Consumer guest | **$0.15/month** provider (local calendar; no daily) | Hard stop `CONSUMER_MONTHLY_SPEND_LIMIT` → login modal (“Log in for higher usage”) |
+| Consumer signed-in, no Instant | Personal monthly free **billed** credit **$0.50** (or **$0.10** if not first create on device); no daily hard stop | Then Personal PAYG if card; else monthly hard stop → `/plans` |
+| Consumer Instant ($9.99/mo) | **$20/mo** plan credit per local calendar month (cancel→renew same month does not refresh; bonus/referral first; no free $0.50) | Then Personal org PAYG at token rates |
+| Personal-org API | Same Personal free / Instant credit | Then org wallet PAYG |
+
+## Paid (API / org wallet)
+
+The only paid meter is **AI tokens**: **$2.50 / 1M input**, **$15.00 / 1M output** (documents, agent tools, Apply with AI tokens, platform AI chat, and job-detail AI generations after the free 100/day).
+
+Public People Search is temporarily disabled (410). Do not quote People Search prices.
+
+## Free quotas (UTC)
+
+| Item | Quota |
 | --- | --- |
-| Job search | **$0.0015 per job in `data`** (not per HTTP request) |
-| Job detail | $0.0015 per request |
-| Salary average | $0.05 per request |
-| Hosted apply | $0.01 per successful apply |
-| Apply with AI | $0.15 per **started** session |
-| People search | $0.05 per request |
-| Resume unlock | $1.00 per unlock |
-| `GET /stats` / market overview | **Free** |
+| Job search | **1000** jobs returned / month |
+| Job detail (raw / cached AI) | **Free** — raw `description_text` and already-persisted AI fields never bill |
+| Job detail AI generation | **100** free first-time AI enrichments/org/**UTC day**, then token rates (not a hard deny) |
+| Salary average | **1000** requests / month |
+| Company map | **1000** requests / month |
+| Company search | **1000** companies returned / month |
+| Custom columns (structured / sandbox JS / hybrid) | **1000** rows/org / month each |
+| Sandbox Python | **1000** jobs/org / month |
+| Platform / ATS email | **100** messages/org / month |
 
-Failed flat-fee calls are free. Token usage on AI document tools still bills.
-
-## Agent spend rules
-
-1. Cap search `limit` at 10–20 unless the user asks for more.
-2. Paginate only on explicit user intent (max ~3 pages per conversation).
-3. Never retry **402** (insufficient balance). Point the user to https://worklittle.com/work/billing.
-4. Retrying a metered success path spends again — check idempotency (`/applied-jobs`, session status) before re-apply.
-5. Prefer free `GET /stats` / `get_market_overview` for counts and trends instead of paging search results.
+Docs: [Jobs pricing](https://docs.worklittle.com/jobs/get-started/pricing) · [Business pricing](https://docs.worklittle.com/business/get-started/pricing) · [Jobs rate limits](https://docs.worklittle.com/jobs/resources/rate-limits) · [Business rate limits](https://docs.worklittle.com/business/resources/rate-limits)

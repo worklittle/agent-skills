@@ -14,14 +14,14 @@ Jobs product skill (market apply). For document-only work prefer skill `resume-c
 
 | Path | When | Call | Cost cue |
 | --- | --- | --- | --- |
-| **Apply with AI** | Employer form automation (browser run) | `POST /v1/apply-with-ai` / `start_apply_with_ai` | ~$0.15 per started session |
+| **Apply with AI** | Employer form automation (browser run) | `POST /v1/apply-with-ai` / `start_apply_with_ai` | AI tokens + browser duration; no per-user concurrent cap — Waiting queue when browser slots are full; stops when credit runs out |
 | **Hosted apply** | Worklittle-published job with application fields | `POST /jobs/:id/apply` / `submit_job_application` | ~$0.01 success |
 
 Public careers boards: `POST /job-boards/:company/jobs/:id/apply` — no API key, separate rate limit.
 
 ## Critical rules
 
-- **`apply_with_ai_eligible` is the only eligibility check** for Apply with AI. Never sniff Greenhouse/Ashby URLs or `source_name`.
+- **`apply_with_ai_eligible` is the only eligibility check** for Apply with AI. Never guess from `apply_url`, `source_name`, or the careers site host.
 - **`closed_at` and `apply_with_ai_eligible` are independent.** Re-read job details immediately before apply.
 - **Documents are grounded.** Hiring-ready resumes/cover letters use only the candidate's real history + posting keywords. Omit unknowns; never invent employers, schools, or metrics.
 - **Use `get_job_keywords` as `job_context`**, not the full job description.
