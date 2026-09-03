@@ -12,7 +12,7 @@ Same account, same `sk-wl-api01-...` key, same billing. Choose by where code run
 ## REST-only gaps (no MCP equivalent)
 
 - Contact unlock: `GET /people/:id/contact`
-- Public board apply: `POST /job-boards/:company/jobs/:id/apply` (no key)
+- Public board apply: `POST /business/jobs/company/:company/jobs/:id/apply` (no key)
 
 Prefer MCP when the agent already has an MCP client. Prefer REST when you need those routes or tight control over pagination and retries.
 

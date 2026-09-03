@@ -4,9 +4,9 @@ Attendance is the calendar API. There is **no** `/calendar` prefix. Same data as
 
 | Method | Path | Purpose |
 | --- | --- | --- |
-| GET | `/attendance` | Org calendar entries |
-| POST | `/attendance` | Create (e.g. PTO) |
-| GET | `/attendance/me` | Current employee's entries |
+| GET | `/business/attendance` | Org calendar entries |
+| POST | `/business/attendance` | Create (e.g. PTO) |
+| GET | `/business/employees/:id/attendance` | Entries for one employee |
 | GET | `/attendance/avatars` | Avatar bundle for calendar UI |
 | PATCH | `/attendance/:id` | Update |
 | DELETE | `/attendance/:id` | Delete |

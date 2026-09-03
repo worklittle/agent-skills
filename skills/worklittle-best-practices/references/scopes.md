@@ -15,7 +15,7 @@ Missing scope → **403**. Empty result sets are not a substitute for a missing 
 
 | Scope | Allows |
 | --- | --- |
-| `jobs:post` | `/job-listings`, `/jobs/manage`, `/jobs/post/*` |
+| `jobs:post` | `/business/jobs`, `/jobs/manage`, `/jobs/post/*` |
 | `jobs:applications` | ATS (`/candidates`, `/employees`, `/offers`, `/attendance`, email, …) |
 | `people:read` | Reserved — public People Search temporarily unavailable |
 | `webhooks:manage` | `/webhooks` CRUD and delivery |

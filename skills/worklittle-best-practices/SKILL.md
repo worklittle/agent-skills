@@ -31,7 +31,7 @@ Auth: Bearer `sk-wl-api01-...` from [API keys](https://worklittle.com/business/a
 | Job seeker alert emails | Settings on worklittle.com | skill `job-alerts` |
 | Apply with AI or hosted apply | Jobs apply APIs | skill `apply-with-ai` |
 | Resumes / cover letters | Document APIs | skill `resume-cover-letter` |
-| Publish employer listings | `/job-listings` | skill `post-a-job` |
+| Publish employer listings | `/business/jobs` | skill `post-a-job` |
 | Candidates (stages, interviews, offers, email, webhooks) | Business `/candidates` | skill `candidates` |
 | Employees (roster, attendance calendar, email, webhooks) | Business `/employees` | skill `employees` |
 | Docs lookup | docs discovery | skill `worklittle-docs` |

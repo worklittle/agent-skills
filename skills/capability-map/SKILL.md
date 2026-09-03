@@ -31,7 +31,7 @@ The only paid meter is **AI tokens**. Job search and most ATS calls are free wit
 
 ## REST-only gaps (no MCP)
 
-- Public board apply: `POST /job-boards/:company/jobs/:id/apply`
+- Public board apply: `POST /business/jobs/company/:company/jobs/:id/apply`
 
 ## Docs
 
