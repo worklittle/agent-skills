@@ -55,7 +55,7 @@
     },
     {
       "name": "apply-with-ai",
-      "description": "Guides Worklittle Jobs apply flows: Apply with AI eligibility and session lifecycle, hosted apply via POST /jobs/:id/apply, closed_at vs apply_with_ai_eligible, and grounded resume/cover letter generation. Use when applying to jobs, starting Apply with AI, checking apply_with_ai_eligible, or generating application documents on the Jobs product.",
+      "description": "Guides Worklittle Jobs apply flows: Apply with AI eligibility and session lifecycle, hosted apply via POST /jobs/:id/apply, closed_at vs can_apply, and grounded resume/cover letter generation. Use when applying to jobs, starting Apply with AI, checking can_apply, or generating application documents on the Jobs product.",
       "files": [
         "SKILL.md",
         "references/apply.md",
@@ -64,7 +64,7 @@
     },
     {
       "name": "resume-cover-letter",
-      "description": "Guides Worklittle resume and cover letter generation: hiring-ready vs draft modes, get_job_keywords as job_context, output formats, and attach-to-apply fields. Use when tailoring documents to a job_id or building apply pipelines — not for Apply with AI browser sessions (use skill apply-with-ai) or ATS candidate writes (use skill candidates).",
+      "description": "Guides Worklittle resume and cover letter generation: hiring-ready output, get_job_keywords as job_context, output formats, and attach-to-apply fields. Use when tailoring documents to a job_id or building apply pipelines — not for Apply with AI browser sessions (use skill apply-with-ai) or ATS candidate writes (use skill candidates).",
       "files": [
         "SKILL.md"
       ]

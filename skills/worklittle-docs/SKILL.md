@@ -11,7 +11,7 @@ Prefer fetching Worklittle docs over inventing API shapes.
 ## Discovery order
 
 1. **Index** — [https://docs.worklittle.com/llms.txt](https://docs.worklittle.com/llms.txt)
-2. **Full agent manifest** — [https://docs.worklittle.com/docs-agent-manifest.json](https://docs.worklittle.com/docs-agent-manifest.json) (paths, titles, full `page_text`, learning paths)
+2. **Agent manifest** — [https://docs.worklittle.com/docs-agent-manifest.json](https://docs.worklittle.com/docs-agent-manifest.json) (paths, titles, descriptions, nav, learning paths). Does not include full page bodies.
 3. **Page as Markdown** — request a docs URL with `Accept: text/markdown`, or append `.md` (e.g. `https://docs.worklittle.com/jobs/api/search-jobs.md`)
 4. **OpenAPI** — [https://docs.worklittle.com/openapi/openapi.yaml](https://docs.worklittle.com/openapi/openapi.yaml)
 5. **Agent skills index** — [https://docs.worklittle.com/.well-known/skills/index.json](https://docs.worklittle.com/.well-known/skills/index.json)
@@ -20,6 +20,7 @@ Prefer fetching Worklittle docs over inventing API shapes.
 
 | Goal | Page |
 | --- | --- |
+| Agent onboarding | [Agent Quickstart skill](https://docs.worklittle.com/agent-onboarding/SKILL.md) ([human page](https://docs.worklittle.com/use-cases/agent-quickstart)) |
 | Goal → endpoint / tool / scope | [Capability map](https://docs.worklittle.com/use-cases/capability-map) |
 | Call sequences | [Tool chains](https://docs.worklittle.com/use-cases/tool-chains) |
 | Job search filters | [Search jobs](https://docs.worklittle.com/jobs/api/search-jobs) |

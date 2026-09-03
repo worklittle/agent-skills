@@ -1,6 +1,6 @@
 # Billing and rate limits
 
-Default rate limit: **60 requests/min per key**. On per-minute `429` with `RATE_LIMITED`, honor `Retry-After` (often 60).
+Default rate limit: **60 requests/min per key**. On per-minute `429` with `RATE_LIMITED`, honor `Retry-After` (often 60). Those 429s, plus `UNAUTHORIZED`, `FORBIDDEN`, and `PAYMENT_REQUIRED`, include `error.documentation_url` — fetch that Help page before guessing.
 
 Monthly free quotas return `429` with code **`QUOTA_EXCEEDED`** (no Retry-After). Tell the user to email **business@worklittle.com** for higher limits. Do not busy-retry.
 

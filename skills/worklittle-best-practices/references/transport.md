@@ -6,7 +6,7 @@ Same account, same `sk-wl-api01-...` key, same billing. Choose by where code run
 | --- | --- | --- |
 | **MCP** (`https://mcp.worklittle.com`) | Coding agents with tool calling | JSON-RPC tools forward to the Jobs API |
 | **REST** (`https://api.worklittle.com`) | Backends, webhooks receivers, fine control | Full surface including REST-only routes |
-| **SDK** (`@worklittle/sdk` / `worklittle` Python) | In-process typed clients | Same endpoints as REST |
+| **SDK** (`worklittle` on npm and PyPI) | In-process typed clients | Same endpoints as REST |
 | **CLI** (`worklittle`) | Shell scripts, JSON on stdout | Same auth and billing |
 
 ## REST-only gaps (no MCP equivalent)
