@@ -63,6 +63,13 @@
       ]
     },
     {
+      "name": "apply-to-jobs-instantly",
+      "description": "Apply to jobs with AI straight from the chat: pick the job, confirm, and Worklittle fills out the employer's application. Use for apply for me, apply to this job, send my application, apply to these — not for browsing jobs only (use job-search) or writing a resume.",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
       "name": "resume-cover-letter",
       "description": "Guides Worklittle resume and cover letter generation: hiring-ready output, get_job_keywords as job_context, output formats, and attach-to-apply fields. Use when tailoring documents to a job_id or building apply pipelines — not for Apply with AI browser sessions (use skill apply-with-ai) or ATS candidate writes (use skill candidates).",
       "files": [
